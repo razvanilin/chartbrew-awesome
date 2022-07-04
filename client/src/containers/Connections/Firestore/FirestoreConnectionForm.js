@@ -13,7 +13,6 @@ import { useDropzone } from "react-dropzone";
 
 import "ace-builds/src-min-noconflict/mode-json";
 import "ace-builds/src-min-noconflict/theme-tomorrow";
-import "ace-builds/webpack-resolver";
 
 import { blue, secondary } from "../../../config/colors";
 

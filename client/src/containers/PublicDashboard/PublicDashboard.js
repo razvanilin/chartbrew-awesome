@@ -19,7 +19,6 @@ import "react-toastify/dist/ReactToastify.min.css";
 import AceEditor from "react-ace";
 import "ace-builds/src-min-noconflict/mode-css";
 import "ace-builds/src-min-noconflict/theme-tomorrow";
-import "ace-builds/webpack-resolver";
 
 import {
   getPublicDashboard as getPublicDashboardAction,

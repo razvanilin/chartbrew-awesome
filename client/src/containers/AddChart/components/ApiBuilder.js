@@ -14,7 +14,6 @@ import { toast } from "react-toastify";
 import "ace-builds/src-min-noconflict/mode-json";
 import "ace-builds/src-min-noconflict/mode-javascript";
 import "ace-builds/src-min-noconflict/theme-tomorrow";
-import "ace-builds/webpack-resolver";
 
 import ApiPagination from "./ApiPagination";
 import {
