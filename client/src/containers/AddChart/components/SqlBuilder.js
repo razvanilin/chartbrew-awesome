@@ -12,6 +12,7 @@ import { toast } from "react-toastify";
 import "ace-builds/src-min-noconflict/mode-json";
 import "ace-builds/src-min-noconflict/mode-pgsql";
 import "ace-builds/src-min-noconflict/theme-tomorrow";
+import "ace-builds/webpack-resolver";
 
 import { createSavedQuery, updateSavedQuery } from "../../../actions/savedQuery";
 import { runRequest as runRequestAction } from "../../../actions/dataset";

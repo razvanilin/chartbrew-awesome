@@ -15,6 +15,7 @@ import { enGB } from "date-fns/locale";
 
 import "ace-builds/src-min-noconflict/mode-json";
 import "ace-builds/src-min-noconflict/theme-tomorrow";
+import "ace-builds/webpack-resolver";
 
 import {
   runRequest as runRequestAction,

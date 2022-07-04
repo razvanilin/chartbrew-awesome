@@ -9,6 +9,7 @@ import AceEditor from "react-ace";
 
 import "ace-builds/src-min-noconflict/mode-json";
 import "ace-builds/src-min-noconflict/theme-tomorrow";
+import "ace-builds/webpack-resolver";
 
 /*
   The MongoDB connection form
