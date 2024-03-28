@@ -27,8 +27,10 @@ module.exports = (app) => {
     jwt.sign(userToken, app.settings.secret, {
       expiresIn: 2592000 // a month
     }, (err, token) => {
+      console.log("jwt error", err);
       if (err) return res.status(400).send(err);
       const tokenizedResponse = userResponse(user);
+      console.log("tokenized", tokenizedResponse);
       tokenizedResponse.token = token;
       return res.status(200).send(tokenizedResponse);
     });
