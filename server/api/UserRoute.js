@@ -200,6 +200,7 @@ module.exports = (app) => {
         return tokenizeUser(user, res);
       })
       .catch((error) => {
+        console.log("error api", error);
         if (error.message === "401") {
           return res.status(401).json({ message: "The credentials are incorrect" });
         }
