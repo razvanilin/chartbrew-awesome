@@ -144,6 +144,7 @@ class UserController {
 
   async login(email, password) {
     try {
+      console.log("email", email);
       const foundUser = await db.User.findOne({ where: { email: { [Op.like]: email } } });
 
       if (!foundUser) {
@@ -154,8 +155,11 @@ class UserController {
 
       if (foundUser.password.startsWith("$2a$") || foundUser.password.startsWith("$2b$") || foundUser.password.startsWith("$2y$")) {
         isAuthenticated = await bcrypt.compare(password, foundUser.password);
+        console.log("is auth compare", isAuthenticated);
       } else {
         isAuthenticated = (foundUser.password === sc.encrypt(password));
+
+        console.log("is auth old", isAuthenticated);
 
         if (isAuthenticated) {
           const bcryptHash = await bcrypt.hash(password, 10);
@@ -179,6 +183,7 @@ class UserController {
 
       return foundUser;
     } catch (error) {
+      console.log("error", error);
       throw new Error(error.message);
     }
   }
